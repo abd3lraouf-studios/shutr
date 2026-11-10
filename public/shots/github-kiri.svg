@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
-  <!-- Placeholder for a real screenshot of github.com/Moltenship/kiri. Swap the file, keep the size. -->
+  <!-- Placeholder for a real screenshot of github.com/abd3lraouf-studios/kiri. Swap the file, keep the size. -->
   <rect width="1200" height="760" fill="#ffffff"/>
 
   <!-- Site header -->
   <rect width="1200" height="64" fill="#f6f8fa"/>
   <rect y="63" width="1200" height="1" fill="#d1d9e0"/>
   <circle cx="44" cy="32" r="16" fill="#1f2328"/>
-  <text x="76" y="37" font-size="15" fill="#1f2328">Moltenship <tspan fill="#59636e">/</tspan> <tspan font-weight="600">kiri</tspan></text>
+  <text x="76" y="37" font-size="15" fill="#1f2328">abd3lraouf-studios <tspan fill="#59636e">/</tspan> <tspan font-weight="600">kiri</tspan></text>
   <rect x="820" y="18" width="250" height="28" rx="6" fill="#ffffff" stroke="#d1d9e0"/>
   <rect x="836" y="29" width="90" height="6" rx="3" fill="#d1d9e0"/>
   <circle cx="1146" cy="32" r="14" fill="#d8dee4"/>

@@ -5,7 +5,7 @@ import Logo from './Logo.astro'
 import FeatureDemo from '../features/FeatureDemo'
 import { FEATURES } from '../features/copy'
 
-const GITHUB = 'https://github.com/Moltenship/kiri'
+const GITHUB = 'https://github.com/abd3lraouf-studios/kiri'
 const RELEASES = `${GITHUB}/releases`
 const DMG = `${RELEASES}/latest/download/Kiri.dmg`
 const SETUP = `${RELEASES}/latest/download/Kiri-Setup.exe`
@@ -107,7 +107,7 @@ const APP = {
               <div class="net-head"><img src="/icon.png" width="20" height="20" alt="" /><b>Kiri</b><span>Outgoing connections today</span></div>
               <div class="net-row">
                 <span class="net-dot"></span>
-                <span class="net-host"><b>api.github.com</b><code>/repos/Moltenship/kiri/releases</code></span>
+                <span class="net-host"><b>api.github.com</b><code>/repos/abd3lraouf-studios/kiri/releases</code></span>
                 <span class="net-why">Update check</span>
               </div>
               <div class="net-empty">No other connections</div>
@@ -171,7 +171,7 @@ const APP = {
       )
       show()
 
-      const api = 'https://api.github.com/repos/Moltenship/kiri'
+      const api = 'https://api.github.com/repos/abd3lraouf-studios/kiri'
       fetch(api)
         .then((r) => r.json())
         .then(({ stargazers_count: n }: { stargazers_count?: number }) => {
