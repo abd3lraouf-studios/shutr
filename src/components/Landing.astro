@@ -4,28 +4,23 @@ import Playground from '../demos/Playground'
 import Logo from './Logo.astro'
 import FeatureDemo from '../features/FeatureDemo'
 import { FEATURES } from '../features/copy'
-import cargo from '../../../Cargo.toml?raw'
 
-const VERSION = cargo.match(/^version = "(.+)"/m)![1]
-const GITHUB = 'https://github.com/abd3lraouf-studios/kiri'
-const RELEASES = `${GITHUB}/releases`
-const DMG = `${RELEASES}/latest/download/Kiri.dmg`
-const SETUP = `${RELEASES}/latest/download/Kiri-Setup.exe`
+const VERSION = process.env.KIRI_VERSION?.trim() || '0.3.2'
+const RELEASES = 'https://github.com/abd3lraouf-studios/kiri-source/releases'
+const UPSTREAM = 'https://github.com/Moltenship/kiri'
 const F = FEATURES
-const TITLE = 'Kiri: free, open-source screenshot tool for Mac and Windows'
-const DESCRIPTION = 'Capture, mark up and paste in seconds. Scrolling capture, text recognition, blur, measuring and pinning. A free, open-source Shottr alternative for macOS and Windows.'
-const OG_IMAGE = new URL('/og.png', Astro.site).href
+const TITLE = 'Kiri: screenshot tool for Mac and Windows'
+const DESCRIPTION = 'Capture, mark up and paste in seconds. Kiri has scrolling capture, text recognition, blur, measuring and pinning for macOS and Windows.'
+const SITE_URL = Astro.site?.href
+const OG_IMAGE = SITE_URL && new URL('/og.png', SITE_URL).href
 const APP = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'Kiri',
   description: DESCRIPTION,
-  url: Astro.site!.href,
-  downloadUrl: [DMG, SETUP],
+  url: SITE_URL,
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'macOS 15.2 or later, Windows 10 or later',
-  license: 'https://opensource.org/licenses/MIT',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
 }
 ---
 
@@ -37,17 +32,19 @@ const APP = {
     <link rel="icon" href="/icon.png" />
     <title>{TITLE}</title>
     <meta name="description" content={DESCRIPTION} />
-    <link rel="canonical" href={Astro.site!.href} />
+    {SITE_URL && <link rel="canonical" href={SITE_URL} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Kiri" />
-    <meta property="og:url" content={Astro.site!.href} />
+    {SITE_URL && <meta property="og:url" content={SITE_URL} />}
     <meta property="og:title" content={TITLE} />
     <meta property="og:description" content={DESCRIPTION} />
-    <meta property="og:image" content={OG_IMAGE} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="The Kiri editor next to the line: Screenshot, mark it up, paste." />
-    <meta name="twitter:card" content="summary_large_image" />
+    {OG_IMAGE && <>
+      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="The Kiri editor next to the line: Screenshot, mark it up, paste." />
+      <meta name="twitter:card" content="summary_large_image" />
+    </>}
     <script type="application/ld+json" set:html={JSON.stringify(APP)} />
     <script is:inline>
       try { const t = localStorage.getItem('kiri-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t } catch {}
@@ -59,30 +56,24 @@ const APP = {
       <a class="brand" href="/"><img src="/icon.png" width="28" height="28" alt="" />Kiri</a>
       <nav>
         <a href="#features">Features</a>
-        <a class="nav-gh" href={GITHUB}><Logo name="github" size={15} />GitHub<span class="stars" data-stars hidden></span></a>
       </nav>
-      <a class="btn btn--small" data-for="mac" href={DMG}><Logo name="apple" size={14} />Download</a>
-      <a class="btn btn--small" data-for="windows" href={SETUP}><Logo name="windows" size={12} />Download</a>
+      <a class="btn btn--small" href="#platforms">Install</a>
     </header>
 
     <main>
       <section class="hero">
-        <a class="eyebrow" href={RELEASES}>{VERSION} <span>·</span> free and open source</a>
+        <span class="eyebrow">Version {VERSION}</span>
         <h1>Screenshot, mark it&nbsp;up, paste.</h1>
         <p class="lede">
           Press <span data-for="mac"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>2</kbd></span><span data-for="windows"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>2</kbd></span>, drag, mark it up, then <kbd>Esc</kbd>. The image is on your clipboard.
           Click the editor below to take over.
         </p>
         <div class="ctas">
-          <a class="btn" data-for="mac" href={DMG}><Logo name="apple" />Download for macOS</a>
-          <a class="btn" data-for="windows" href={SETUP}><Logo name="windows" size={14} />Download for Windows</a>
-          <a class="btn btn--ghost" href={GITHUB}><Logo name="github" />Star on GitHub<span class="stars" data-stars hidden></span></a>
+          <a class="btn" href="#platforms">Install Kiri</a>
         </div>
         <p class="platforms-line">
           <span class="platform"><Logo name="apple" size={13} />macOS 15.2+ on Apple Silicon</span>
           <span class="platform"><Logo name="windows" size={12} />Windows 10 and 11</span>
-          <span class="soon"><Logo name="linux" size={13} />Linux · coming soon</span>
-          <a class="all" href="#platforms">All downloads</a>
         </p>
       </section>
 
@@ -104,19 +95,18 @@ const APP = {
             </article>
           ))}
           <article class="tile span-3">
-            <p class="tile-copy"><b>Nothing leaves your computer.</b> No account, no cloud, no telemetry. The one request Kiri makes is the daily update check.</p>
+            <p class="tile-copy"><b>On-device editing.</b> Kiri processes screenshots and recognizes text on your computer.</p>
             <div class="net" aria-hidden="true">
-              <div class="net-head"><img src="/icon.png" width="20" height="20" alt="" /><b>Kiri</b><span>Outgoing connections today</span></div>
+              <div class="net-head"><img src="/icon.png" width="20" height="20" alt="" /><b>Kiri</b><span>Capture workflow</span></div>
               <div class="net-row">
                 <span class="net-dot"></span>
-                <span class="net-host"><b>api.github.com</b><code>/repos/abd3lraouf-studios/kiri/releases</code></span>
-                <span class="net-why">Update check</span>
+                <span class="net-host"><b>Screenshot</b><code>Capture → Mark up → Copy</code></span>
+                <span class="net-why">On device</span>
               </div>
-              <div class="net-empty">No other connections</div>
             </div>
           </article>
           <article class="tile span-3">
-            <p class="tile-copy"><b>Open at the core.</b> MIT licensed and written in Rust. Every feature is free, including the ones other tools sell. <a href={GITHUB}>Read the source</a></p>
+            <p class="tile-copy"><b>Built on Kiri.</b> The <a href={UPSTREAM}>original MIT-licensed project</a> is by Timofey Maximov and Kiri contributors.</p>
             <div class="license" aria-hidden="true">
               <div class="license-page">
                 <span class="license-file">LICENSE</span>
@@ -132,25 +122,21 @@ const APP = {
       <section class="section get" id="platforms">
         <img class="get-icon" src="/icon.png" width="96" height="96" alt="" />
         <h2>Get Kiri</h2>
-        <p class="get-lede">Free and open source. No account to make.</p>
+        <p class="get-lede">Sign in to GitHub with access to the private repository to see available installers.</p>
         <div class="ctas">
-          <a class="btn" href={DMG}><Logo name="apple" />Download for macOS</a>
-          <a class="btn" href={SETUP}><Logo name="windows" size={14} />Download for Windows</a>
+          <a class="btn" href={RELEASES}><Logo name="github" />View private releases</a>
         </div>
         <ul class="os">
           <li data-ready><Logo name="apple" /><b>macOS</b><span>15.2+ on Apple Silicon</span></li>
           <li data-ready><Logo name="windows" /><b>Windows</b><span>10 and 11, x64</span></li>
-          <li><Logo name="linux" /><b>Linux</b><span>Coming soon</span></li>
         </ul>
-        <p class="watch">Kiri for Windows isn't signed yet, so SmartScreen may stop the installer once: choose More info, then Run anyway.</p>
-        <p class="watch"><a href={RELEASES}>Watch releases on GitHub</a> to hear when Linux lands.</p>
       </section>
     </main>
 
     <footer class="foot">
       <span class="foot-brand"><img src="/icon.png" width="20" height="20" alt="" /> Kiri</span>
       <span class="foot-links">
-        <span>MIT · <a href={GITHUB}>GitHub</a> · <a href={`${GITHUB}/blob/main/CHANGELOG.md`}>Changelog</a></span>
+        <span><a href={UPSTREAM}>Original project</a></span>
         <span class="theme" role="group" aria-label="Theme">
           <button type="button" data-set="auto">Auto</button>
           <button type="button" data-set="light">Light</button>
@@ -172,19 +158,6 @@ const APP = {
         }),
       )
       show()
-
-      const api = 'https://api.github.com/repos/abd3lraouf-studios/kiri'
-      fetch(api)
-        .then((r) => r.json())
-        .then(({ stargazers_count: n }: { stargazers_count?: number }) => {
-          if (typeof n !== 'number') return
-          const text = n < 1000 ? String(n) : `${(n / 1000).toFixed(n < 10000 ? 1 : 0).replace(/\.0$/, '')}k`
-          document.querySelectorAll<HTMLElement>('[data-stars]').forEach((s) => {
-            s.textContent = text
-            s.hidden = false
-          })
-        })
-        .catch(() => {})
     </script>
   </body>
 </html>

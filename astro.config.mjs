@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config'
 import react from '@astrojs/react'
 
 export default defineConfig({
-  site: 'https://kiri.molten.sh',
+  site: process.env.KIRI_SITE_URL?.trim() || undefined,
   integrations: [react()],
 })
