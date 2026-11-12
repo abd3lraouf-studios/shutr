@@ -16,6 +16,7 @@
     "cover": "assets/cover.webp",
     "capture": "assets/capture.webp",
     "annotate": "assets/annotate.webp",
-    "share": "assets/share.webp"
+    "share": "assets/share.webp",
+    "editorScreenshot": "assets/editor-screenshot.webp"
   }
 }
