@@ -26,8 +26,9 @@ Shutr is open source under the MIT license. Downloads are available for macOS 15
 The [product metadata](metadata.json) lists artwork paths relative to this directory and links to the release. The portfolio consumes this directory from its Shutr submodule.
 
 - Brand assets include the [app icon](assets/icon.png) and [editor showcase](assets/cover.webp). The [original editor screenshot](assets/editor-screenshot.webp) is available for press use.
+- The [editor tools sheet](assets/tool-showcase.webp) shows Shutr’s selection and drawing tools in use.
 - Real Shutr screenshots composited into studio scenes show [selecting a region](assets/capture.webp), [annotating](assets/annotate.webp), and [pinning](assets/share.webp).
-- The screenshots use [Apollo 8’s Earthrise photograph](https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/) by NASA and Bill Anders.
+- The Earthrise scenes use [Apollo 8’s Earthrise photograph](https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/) by NASA and Bill Anders.
 
 ## Attribution
 
