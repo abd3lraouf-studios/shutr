@@ -19,7 +19,7 @@
 
 ## Availability
 
-Shutr is open source under the MIT license. Downloads are available for macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64. See the [latest release](https://github.com/abd3lraouf-studios/shutr/releases/latest).
+Shutr is open source under the MIT license. Downloads are available for macOS 15.2 or later on Apple silicon, Windows 10 or 11 on x64, and Ubuntu 24.04 on x64. See the [latest release](https://github.com/abd3lraouf-studios/shutr/releases/latest).
 
 ## Artwork
 
