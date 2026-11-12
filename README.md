@@ -1,19 +1,15 @@
-# Kiri marketing
+# FrameLatch
 
-Landing page and interactive demos for the macOS and Windows screenshot tool. Access to the [private Kiri releases](https://github.com/abd3lraouf-studios/kiri-source/releases) requires a GitHub account with repository permissions.
+FrameLatch captures areas, windows, full screens, and scrolling pages. Annotate shots with arrows, text, and blur, copy text from a capture, or pin a screenshot above other windows.
 
-## Development
+FrameLatch supports macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64.
 
-```sh
-bun install --frozen-lockfile
-bun run dev
-```
+Visit the [FrameLatch project page](https://abd3lraouf.dev/projects/framelatch/) for product information.
 
-Run `bun run build` to generate the static site in `dist/`. The build works from this repository root.
+## Marketing assets
 
-- `KIRI_VERSION` sets the displayed app version at build time. It defaults to `0.3.2`.
-- `KIRI_SITE_URL` sets the canonical URL and social preview image origin. Set it to the site's own HTTPS URL once one has been assigned. Leave it unset for local builds.
+This repository contains the [product metadata](metadata.json) and artwork used by the portfolio and FrameLatch source repository. Asset paths in the metadata are relative to this repository root.
 
 ## Attribution
 
-The site and demos come from [the original Kiri project](https://github.com/Moltenship/kiri) by Timofey Maximov and Kiri contributors. This repository retains the website's Git history and original [MIT license](LICENSE).
+FrameLatch is based on [Kiri](https://github.com/Moltenship/kiri) by Timofey Maximov and Kiri contributors. This repository retains Kiri’s original [MIT license](LICENSE).

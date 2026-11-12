@@ -1,0 +1,9 @@
+{
+  "name": "FrameLatch",
+  "slug": "framelatch",
+  "description": "Capture, annotate, and pin screenshots on macOS and Windows.",
+  "assets": {
+    "icon": "assets/icon.png",
+    "cover": "assets/cover.webp"
+  }
+}
