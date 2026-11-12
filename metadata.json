@@ -3,7 +3,7 @@
   "slug": "shutr",
   "description": "Capture and annotate screenshots on macOS, Windows, and Linux.",
   "release": {
-    "version": "0.6.0",
+    "version": "0.7.0",
     "url": "https://github.com/abd3lraouf-studios/shutr/releases/latest",
     "downloads": {
       "macos": "https://github.com/abd3lraouf-studios/shutr/releases/latest/download/Shutr.dmg",
