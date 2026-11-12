@@ -2,6 +2,15 @@
   "name": "FrameLatch",
   "slug": "framelatch",
   "description": "Capture, annotate, and pin screenshots on macOS and Windows.",
+  "release": {
+    "version": "0.4.0",
+    "url": "https://github.com/abd3lraouf-studios/framelatch/releases/tag/v0.4.0",
+    "downloads": {
+      "macos": "https://github.com/abd3lraouf-studios/framelatch/releases/download/v0.4.0/FrameLatch.dmg",
+      "windows": "https://github.com/abd3lraouf-studios/framelatch/releases/download/v0.4.0/FrameLatch-Setup.exe",
+      "windowsPortable": "https://github.com/abd3lraouf-studios/framelatch/releases/download/v0.4.0/FrameLatch-windows-x64.zip"
+    }
+  },
   "assets": {
     "icon": "assets/icon.png",
     "cover": "assets/cover.webp",

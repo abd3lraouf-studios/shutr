@@ -15,11 +15,11 @@ FrameLatch is a screenshot and markup app for macOS and Windows. Capture what’
 
 ## Availability
 
-FrameLatch is in private development for macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64. Installer downloads require access to the private source repository.
+FrameLatch is open source under the MIT license. Downloads are available for macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64. See the [latest release](https://github.com/abd3lraouf-studios/framelatch/releases/latest).
 
 ## Artwork
 
-The [product metadata](metadata.json) lists the artwork paths relative to this repository. The portfolio and FrameLatch source consume this repository as a submodule.
+The [product metadata](metadata.json) lists artwork paths relative to this directory and links to the release. The portfolio consumes this directory from its FrameLatch submodule.
 
 - Brand artwork includes the [app icon](assets/icon.png) and [cover image](assets/cover.webp).
 - Feature illustrations depict [capturing](assets/capture.webp), [annotating](assets/annotate.webp), and [sharing](assets/share.webp).
