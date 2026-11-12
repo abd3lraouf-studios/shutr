@@ -4,7 +4,7 @@ Shutr is a screenshot and markup app for macOS and Windows. Capture what’s on 
 
 [Project page](https://abd3lraouf.dev/projects/shutr/) · [Press kit](https://abd3lraouf.dev/press/shutr/)
 
-![Shutr cover artwork](assets/cover.webp)
+![Shutr’s editor marking up the Apollo 8 Earthrise photograph](assets/cover.webp)
 
 ## Features
 
@@ -21,8 +21,9 @@ Shutr is open source under the MIT license. Downloads are available for macOS 15
 
 The [product metadata](metadata.json) lists artwork paths relative to this directory and links to the release. The portfolio consumes this directory from its Shutr submodule.
 
-- Brand artwork includes the [app icon](assets/icon.png) and [cover image](assets/cover.webp).
-- Feature illustrations depict [capturing](assets/capture.webp), [annotating](assets/annotate.webp), and [sharing](assets/share.webp).
+- Brand assets include the [app icon](assets/icon.png) and [editor screenshot](assets/cover.webp).
+- Shutr screenshots show [selecting and cropping](assets/capture.webp), [annotating](assets/annotate.webp), and [pinning](assets/share.webp).
+- The screenshots use [Apollo 8’s Earthrise photograph](https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/) by NASA and Bill Anders.
 
 ## Attribution
 
