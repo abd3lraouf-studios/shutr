@@ -4,6 +4,9 @@
   "description": "Capture, annotate, and pin screenshots on macOS and Windows.",
   "assets": {
     "icon": "assets/icon.png",
-    "cover": "assets/cover.webp"
+    "cover": "assets/cover.webp",
+    "capture": "assets/capture.webp",
+    "annotate": "assets/annotate.webp",
+    "share": "assets/share.webp"
   }
 }

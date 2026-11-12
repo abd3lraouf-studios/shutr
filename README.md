@@ -1,14 +1,28 @@
 # FrameLatch
 
-FrameLatch captures areas, windows, full screens, and scrolling pages. Annotate shots with arrows, text, and blur, copy text from a capture, or pin a screenshot above other windows.
+FrameLatch is a screenshot and markup app for macOS and Windows. Capture what’s on screen, mark up the details, and keep the result handy while you work.
 
-FrameLatch supports macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64.
+[Project page](https://abd3lraouf.dev/projects/framelatch/) · [Press kit](https://abd3lraouf.dev/press/framelatch/)
 
-Visit the [FrameLatch project page](https://abd3lraouf.dev/projects/framelatch/) for product information.
+![FrameLatch cover art showing teal capture brackets around stacked glass panes with an amber latch](assets/cover.webp)
 
-## Marketing assets
+## Features
 
-This repository contains the [product metadata](metadata.json) and artwork used by the portfolio and FrameLatch source repository. Asset paths in the metadata are relative to this repository root.
+- **Capture** an area, a window, a full screen, or a scrolling page.
+- **Annotate** with arrows, shapes, and text. Crop to the area you need or blur sensitive details.
+- **Keep it handy** by moving the floating thumbnail with its grip or pinning the image above other windows.
+- **Send or reuse it** by copying, saving, or extracting text and QR codes on your device. On macOS, drag the image out of the thumbnail to attach a full-resolution PNG.
+
+## Availability
+
+FrameLatch is in private development for macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64. Installer downloads require access to the private source repository.
+
+## Artwork
+
+The [product metadata](metadata.json) lists the artwork paths relative to this repository. The portfolio and FrameLatch source consume this repository as a submodule.
+
+- Brand artwork includes the [app icon](assets/icon.png) and [cover image](assets/cover.webp).
+- Feature illustrations depict [capturing](assets/capture.webp), [annotating](assets/annotate.webp), and [sharing](assets/share.webp).
 
 ## Attribution
 
