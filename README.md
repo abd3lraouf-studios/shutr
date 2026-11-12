@@ -1,10 +1,10 @@
-# FrameLatch
+# Shutr
 
-FrameLatch is a screenshot and markup app for macOS and Windows. Capture what’s on screen, mark up the details, and keep the result handy while you work.
+Shutr is a screenshot and markup app for macOS and Windows. Capture what’s on screen, mark up the details, and keep the result handy while you work.
 
-[Project page](https://abd3lraouf.dev/projects/framelatch/) · [Press kit](https://abd3lraouf.dev/press/framelatch/)
+[Project page](https://abd3lraouf.dev/projects/shutr/) · [Press kit](https://abd3lraouf.dev/press/shutr/)
 
-![FrameLatch cover art showing teal capture brackets around stacked glass panes with an amber latch](assets/cover.webp)
+![Shutr cover artwork](assets/cover.webp)
 
 ## Features
 
@@ -15,15 +15,15 @@ FrameLatch is a screenshot and markup app for macOS and Windows. Capture what’
 
 ## Availability
 
-FrameLatch is open source under the MIT license. Downloads are available for macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64. See the [latest release](https://github.com/abd3lraouf-studios/framelatch/releases/latest).
+Shutr is open source under the MIT license. Downloads are available for macOS 15.2 or later on Apple silicon and Windows 10 or 11 on x64. See the [latest release](https://github.com/abd3lraouf-studios/shutr/releases/latest).
 
 ## Artwork
 
-The [product metadata](metadata.json) lists artwork paths relative to this directory and links to the release. The portfolio consumes this directory from its FrameLatch submodule.
+The [product metadata](metadata.json) lists artwork paths relative to this directory and links to the release. The portfolio consumes this directory from its Shutr submodule.
 
 - Brand artwork includes the [app icon](assets/icon.png) and [cover image](assets/cover.webp).
 - Feature illustrations depict [capturing](assets/capture.webp), [annotating](assets/annotate.webp), and [sharing](assets/share.webp).
 
 ## Attribution
 
-FrameLatch is based on [Kiri](https://github.com/Moltenship/kiri) by Timofey Maximov and Kiri contributors. This repository retains Kiri’s original [MIT license](LICENSE).
+Shutr is based on [Kiri](https://github.com/Moltenship/kiri) by Timofey Maximov and Kiri contributors. This repository retains Kiri’s original [MIT license](LICENSE).
