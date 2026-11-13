@@ -2,6 +2,10 @@
 
 All notable changes to Shutr, formerly FrameLatch. Versions follow [Semantic Versioning](https://semver.org).
 
+## [0.7.3] - 2026-11-13
+
+- Releases carry only Shutr’s own downloads. FrameLatch 0.4.x installs Shutr manually once to keep updating.
+
 ## [0.7.2] - 2026-11-13
 
 - Shutr can download and install updates by itself: turn on Download and install automatically in Settings → General or in the update window. A downloaded update installs when you quit Shutr or choose Relaunch to Update.
