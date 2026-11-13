@@ -32,4 +32,4 @@ The [product metadata](metadata.json) lists artwork paths relative to this direc
 
 ## Attribution
 
-Shutr is based on [Kiri](https://github.com/Moltenship/kiri) by Timofey Maximov and Kiri contributors. This repository retains Kiri’s original [MIT license](LICENSE).
+This repository keeps the original authors’ [MIT license](LICENSE).
