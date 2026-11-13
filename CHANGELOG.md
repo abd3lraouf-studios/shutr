@@ -1,0 +1,277 @@
+# Changelog
+
+All notable changes to Shutr, formerly FrameLatch. Versions follow [Semantic Versioning](https://semver.org).
+
+## [0.7.2] - 2026-11-13
+
+- Shutr can download and install updates by itself: turn on Download and install automatically in Settings → General or in the update window. A downloaded update installs when you quit Shutr or choose Relaunch to Update.
+- The tray menu shows the update as it happens: checking, the download’s progress, installing, and Relaunch to Update.
+- When an update fails, Try Again retries it and Download Manually… opens the release page. The update window shows the download’s size.
+- After the move to `Programs\Shutr`, Windows keeps Shutr’s tray icon on the taskbar if it was there before.
+
+## [0.7.1] - 2026-11-13
+
+- Shutr’s app ID is now `dev.abd3lraouf.shutr`: the macOS bundle identifier and the Linux desktop entry and window class. Launch at login carries over. A Mac on version 0.6 or earlier installs this version manually once, and macOS asks again for Screen Recording and Accessibility.
+
+## [0.7.0] - 2026-11-13
+
+- Shutr drops its old Kiri names. On Windows it installs as `%LOCALAPPDATA%\Programs\Shutr\Shutr.exe` and updates through its installer, and on macOS the app’s executable is `Shutr.app/Contents/MacOS/shutr`. Updating moves the existing install, settings, and launch at login; scripts that call `Kiri.exe` or `MacOS/kiri` need the new path.
+- Window capture, hover selection, and Capture Active Window include drop-down terminals such as QuaRex’s Quake window, even when it hides as the selector opens.
+- On Windows, closing the capture selector returns focus to the window that was in front, so a drop-down terminal stays open after an area screenshot.
+- On Windows, the editor opens in front after a capture instead of behind an always-on-top window such as a drop-down terminal.
+- In a narrow editor window, the toolbar shows the More button for the tools that don’t fit, and on Windows it always keeps room to drag the window.
+- The hint under a selection has a dark backing so it reads on light captures, and says “Hit Enter to copy” when Enter is set to copy the selected area.
+- The editor fits the image below the style bar, so the bar no longer covers its top-right corner.
+- The color format menu marks the current format with a check and highlights only the row under the pointer.
+- The editor toolbar has larger buttons and icons, and its readouts keep their width as the numbers change.
+- Every slider has one new look, and the backdrop panel shows each slider's value.
+- The style bar shows an icon for every variant, including Redact and Image, and reads “None” when a Spotlight or image border is off.
+- The style bar slides in when you open it, and messages at the bottom of the editor fade in.
+- Updates open a Software Update window with the release notes, download progress, and a choice to install now, be reminded later, skip the version, or relaunch later.
+
+## [0.6.0] - 2026-11-12
+
+- Linux builds include a Debian installer, X11 area and window capture, Wayland desktop capture, on-device text and QR recognition, and editor drag-out.
+- Rotate the image with its editable annotations and convert a ruler into a double-ended arrow.
+- Navigate recent captures and edits, including screenshots that went straight to the clipboard or disk.
+- Frozen area capture adds a pixel magnifier, 10× zoom, precision pointer movement, WASD nudging, and square selection on macOS, Windows, and X11.
+- New settings start with the frozen Shutr selector. Existing capture preferences are retained.
+- Cmd-click on macOS or Ctrl-click on Windows and Linux selects the connected color region around a pixel. Large regions are scanned in the background.
+- Sketch rectangles and ovals keep their stroke pattern when copied or duplicated. A snapped square magnifier keeps equal pixel dimensions.
+- Colored capture icons stay visible in Shutr’s menu bar menu on macOS 27.
+- Insert date fields into filenames, assign a global shortcut for loading clipboard images, and use `shutr://` links from launchers.
+- Upload an image explicitly to an S3-compatible bucket using an AWS CLI profile, with an optional expiring download link.
+
+## [0.5.1] - 2026-11-12
+
+- The Windows tray aperture stays legible when the taskbar changes between light and dark.
+- The product page, press kit, and GitHub README show real Shutr screenshots with NASA’s Apollo 8 Earthrise photograph.
+- Older FrameLatch links to social preview images redirect to the corresponding Shutr artwork.
+
+## [0.5.0] - 2026-11-12
+
+FrameLatch is now Shutr, with a burgundy aperture icon and a matching glyph in the macOS menu bar and Windows tray.
+
+### Changed
+- App menus, settings, installers, and the public repository use the Shutr name.
+- Light and dark themes use burgundy accents, warm surfaces, and copper focus rings.
+- Settings sections and capture commands have colored icon tiles.
+- New screenshots use Shutr in the default filename. Custom filename templates carry over.
+- The download for each platform uses the Shutr name. This release also includes the packages that FrameLatch's updater expects so existing installs can update in place.
+
+## [0.4.1] - 2026-11-12
+
+### Changed
+- Settings has shorter, full-width headers with a different illustration for each of its five sections.
+- The macOS app, Windows installer, and portable ZIP include the original MIT license notice.
+
+### Fixed
+- Open Releases and the Windows installer's update link point to the public FrameLatch repository.
+
+## [0.4.0] - 2026-11-12
+
+The first release under the FrameLatch name. Existing settings and the macOS bundle identity carry over. The Windows installer upgrades Kiri in place.
+
+### Added
+- An illustrated Settings window with a searchable sidebar, clearer groups, and keyboard-accessible appearance and backdrop choices.
+- Floating thumbnails can be repositioned with the grip. On macOS, drag the image into another app to send a full-resolution PNG.
+- A hotkey on all four modifiers shows as ✦, the Hyper key that Raycast, Karabiner, or PowerToys can put on Caps Lock. Hold it and press a key while recording.
+
+### Changed
+- Release builds on both platforms use Font Awesome Pro for the supported interface icons.
+- Settings → Hotkeys has keyboard-accessible Record and Clear controls. While recording, Esc clears the shortcut and Tab keeps the current shortcut.
+- When other apps hold some of FrameLatch's hotkeys, one message lists them all, also after importing settings.
+- Importing settings applies the appearance and Always on top right away.
+
+### Fixed
+- Floating thumbnails keep keyboard focus with the active app and stay within the available screen area as new captures stack.
+- A PNG with see-through parts keeps its colors when you open it or drop it into the editor. Its translucent areas, such as a window's shadow, used to come out too bright in the copy or the saved file.
+- After Rasterize or Resize, and after undoing them, the zoomed-in view, Pixelate text, Erase text and the contrast readout follow the new image.
+- Esc closes the backdrop panel.
+- Settings names the shortcut a hotkey clashes with in every case. Some clashes showed an empty name.
+- Windows: the tray icon's edges are no longer darkened.
+
+## [0.3.2] - 2026-11-10
+
+### Added
+- Windows: Settings → Hotkeys has a "Win+Shift+S opens Snipping Tool" switch. Turn it off to use Win+Shift+S for a Kiri capture. Windows frees it only together with Win+S (Search), and Explorer restarts.
+
+### Fixed
+- Windows: on a Windows whose Settings has no Print Screen switch, Kiri says it changes the setting itself instead of pointing to a page without it, and a hotkey that collides with Snipping Tool points to Kiri's own switch.
+- Windows: when another app holds a Print Screen hotkey, Kiri names the screenshot apps that are running, such as OneDrive or ShareX.
+
+## [0.3.1] - 2026-11-10
+
+No changes to Kiri itself. This release confirms that 0.3.0 updates itself from this repository: Check for Updates… in the tray menu, or wait for the daily check.
+
+## [0.3.0] - 2026-11-10
+
+### Added
+- The editor opens with the select tool. Settings → Editor picks the starting tool, or the one used last.
+- Enter copies the image and keeps the editor open. Settings → Editor can make it copy and close, save, save and close, or do nothing. With an area selected, Enter still crops to it, or can copy just the area.
+- Settings → Editor: go back to the select tool after drawing, start with the style bar open or closed, choose which tools the toolbar shows, and which readouts (contrast, color, size, zoom) it shows.
+- A Settings button in the editor's toolbar.
+- Windows: Settings → Hotkeys has a "Print Screen opens Snipping Tool" switch, which changes Windows' own setting.
+- Windows: the hotkey recorder records Print Screen, with or without modifiers.
+
+### Fixed
+- The active tool is clearly highlighted, and the More (…) button shows only when some tools don't fit.
+- Windows: dragging the image out of the editor works in a maximized window: the drag starts as soon as you pull, not at the window's edge.
+- Windows: hotkeys with Alt record as pressed. With two keyboard layouts, Alt+Shift switched the layout mid-press and Alt+Shift+K recorded as another key.
+- Windows: Settings names and opens the page that holds the Print Screen switch, which Windows 11 moved to Bluetooth & devices › Keyboard, and no longer warns that Alt+PrtScn belongs to Windows.
+- Updates come from this repository's releases.
+
+## [0.2.3] - 2026-11-07
+
+### Fixed
+- Windows: Pixelate text and Erase text now cover small text, such as names and captions in a UI at 100% scale, which Windows text recognition used to miss.
+
+## [0.2.2] - 2026-11-06
+
+### Fixed
+- In a narrow editor window, the color, size and zoom readouts no longer run off the toolbar's edge. The tools that don't fit move into the More (…) menu instead, as in Shottr.
+
+## [0.2.1] - 2026-11-06
+
+### Fixed
+- Windows: shortcuts in Kiri work on any keyboard layout, by the key's place on a US keyboard. On a Russian layout Ctrl+, opens Settings, and zoom, Grow and Shrink Selection, the tool letters, and holding 1 or 2 to measure all work. Text you type still comes in your layout.
+- Windows: Settings no longer scrolls under its window buttons.
+
+## [0.2.0] - 2026-11-06
+
+Kiri for Windows. Download `Kiri-Setup.exe` from the release. It isn't code-signed yet, so SmartScreen may ask once: More info, then Run anyway.
+
+### Added
+- Windows: capture a window or the active window, even when it's covered.
+- Windows: Capture Text, Recognize Text, and Blur Text read text with Windows' own text recognition, in the languages installed in Windows.
+- Windows: Capture Text and Recognize Text read QR codes.
+- Windows: Launch at Login.
+- Windows: Print, on one page, landscape when the image is wide.
+- Windows: Kiri.exe has Kiri's icon, in Explorer, the taskbar, and Alt+Tab.
+- Windows: `Kiri-Setup.exe` installs Kiri for the current user with no admin prompt, with a Start menu shortcut and an entry in Settings → Apps to uninstall it. A newer setup upgrades Kiri in place, closing it first.
+- Windows: updates from GitHub releases, which also carry Kiri for Windows as a portable `Kiri-windows-x64.zip`; a red dot on the tray icon tells of one.
+- `kiri --quit` quits the running Kiri.
+- Windows: Scrolling Capture, down or up, by itself or by hand.
+- Windows: area capture shows the pointer's position, and the selection's size while dragging, beside the pointer.
+- Windows: drag the image out of the editor, a pin, or the thumbnail into another app.
+- Windows: the editor's Menu button lists every command with its shortcut, as the macOS menu bar does, and F11 toggles full screen.
+- Windows: the first-run window, with Ctrl+Shift+1 and Ctrl+Shift+2 next to Snipping Tool or Print Screen in its place.
+- Windows: Settings warns when a hotkey is one of Windows' own, and Use Print Screen gives PrtScn to Capture Area in place of Snipping Tool.
+
+### Changed
+- Windows: the editor and Settings have minimize, maximize, and close buttons, and drag by their title area. Pins drag too.
+- Windows: in text annotations, Ctrl moves and deletes by word, and Home and End go to the start and end of the line.
+- Windows: keys read as Windows writes them (Ctrl+Shift+2, Win, PrtScn) everywhere, Capture Text defaults to Ctrl+Shift+3, Ctrl+Y redoes, and Ctrl+Shift+W closes all editors.
+- Windows: Settings hides the macOS-only Selection and ⌘Q rows, and Freeze the screen is always available.
+- Windows: Alt points a new arrow back at where you started, and Ctrl draws an arrow from its center. Ctrl takes ⌘'s place in other editor drags too.
+- Windows: a hotkey records the key you press on any keyboard layout, so Alt+Shift+4 on a Russian layout stays Alt+Shift+4.
+
+## [0.1.0] - 2026-11-05
+
+The first stable release.
+
+### Fixed
+- Updates find the newest release, however many come out in one day.
+
+## [0.1.0-beta.11] - 2026-11-05
+
+### Added
+- A Speed slider for scrolling capture, in Settings → Capture. Faster scrolls further between frames.
+
+### Changed
+- Window background and Show in are picked from small pictures, as Appearance is.
+- Max height for scrolling capture is a number you type.
+
+## [0.1.0-beta.10] - 2026-11-05
+
+### Changed
+- Style variants in the editor are icons, as in Shottr. Hover one to see its name. Blur and erase modes keep their names.
+
+## [0.1.0-beta.9] - 2026-11-05
+
+### Changed
+- Updating shows the download percentage, then checking and installing, until Kiri restarts. The menu bar item reads Updating to Kiri while it runs. Updates from this version on show it.
+
+### Fixed
+- Pixelate text covers each line of text and leaves the gaps between lines alone, as in Shottr.
+
+## [0.1.0-beta.8] - 2026-11-05
+
+### Added
+- Backdrop → Image → Wallpaper puts the screenshot on your current desktop picture.
+
+### Changed
+- Capture Area selects the same way as the macOS ⇧⌘4. Settings → Capture → Selection → Kiri brings back Kiri's own selection, with arrow keys, Repeat Area Capture, and Freeze the screen. If Freeze the screen was on, Kiri's selection stays.
+
+## [0.1.0-beta.7] - 2026-11-05
+
+### Fixed
+- Capture Area coordinates move with the pointer instead of trailing it, and look like the ones macOS shows for ⇧⌘4.
+
+## [0.1.0-beta.6] - 2026-11-05
+
+### Changed
+- Kiri comes as a DMG: open it and drag Kiri to Applications.
+- Updates download the DMG. Kiri 0.1.0-beta.5 and earlier don't see this release, so install it from the DMG once.
+
+## [0.1.0-beta.5] - 2026-11-05
+
+### Fixed
+- Capture Area no longer flashes a gray screen when it opens.
+
+## [0.1.0-beta.4] - 2026-11-05
+
+### Fixed
+- Capture Area no longer makes the screen blink: the app in front stays active while you select.
+- Capture Area always shows the system crosshair, not the arrow.
+- Recording a shortcut in Settings → Hotkeys no longer starts a macOS or Kiri capture, so ⇧⌘4 or ⇧⌘5 can be recorded.
+
+## [0.1.0-beta.3] - 2026-11-05
+
+### Changed
+- Kiri no longer downloads updates on its own. A red dot on the menu bar icon says a new version is out, and the Update to Kiri item in its menu installs it.
+
+### Added
+- Settings → Hotkeys marks a shortcut that macOS also uses, names the macOS shortcut and its Keyboard Shortcuts section, and opens Keyboard Shortcuts.
+
+## [0.1.0-beta.2] - 2026-11-05
+
+### Added
+- A welcome window on first launch: Screen Recording, the capture shortcuts, and the look.
+- Kiri can take ⇧⌘3 and ⇧⌘4 from macOS in one click, from the welcome window or Settings → Hotkeys.
+- Light and Dark appearances, besides following the system, in Settings → General.
+
+### Changed
+- A new app icon and menu bar icon.
+
+### Fixed
+- Toasts, thumbnails, pins, and the scrolling HUD no longer sit on a square background.
+
+## [0.1.0-beta.1] - 2026-11-05
+
+The first public beta, for macOS 15.2 or later on Apple Silicon.
+
+### Capture
+- Area, screen, window, and delayed captures, with the system's own crosshair and window cursors. Arrow keys nudge the pointer one point at a time.
+- An optional freeze of the screen while selecting, so menus and hover states stay put.
+- Capture Screen can take every display in one image.
+- Window captures with wallpaper, transparency, a solid color, or nothing behind the window.
+- Scrolling capture, automatic or by hand.
+- Text and QR recognition, on device.
+- Repeat Area Capture and Reopen Last Screenshot.
+
+### Editor
+- Arrow, text, rectangle, oval, line, pen, highlighter, counter, blur and erase, spotlight, and magnifier.
+- Annotations past the edge grow the canvas.
+- Crop, trim to content, and zoom to pixel-exact edges.
+- Backdrops.
+- The ruler measures between edges, and holding `1` and `2` together measures width and height at once.
+- A color picker for colors and text colors.
+- Copy, save, and Esc to close return at once, and encoding runs in the background.
+
+### Pins and more
+- Pins float above every window, with opacity and click-through. Hold ⌥ to reach a click-through pin again.
+- `kiri --capture <action> --then <list>` runs captures from scripts, once allowed.
+- Hotkeys for every action, launch at login, and a file name template.
+- Settings can be imported and exported.
+- Kiri updates itself from GitHub releases.
