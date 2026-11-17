@@ -2,6 +2,21 @@
 
 All notable changes to Shutr, formerly FrameLatch. Versions follow [Semantic Versioning](https://semver.org).
 
+## [0.7.6] - 2026-11-17
+
+- On Windows, the tray menu offers **Download Shutr …** for a new version, matching what it does.
+- Update checks follow only secure HTTPS links on every platform.
+
+## [0.7.5] - 2026-11-17
+
+- This release restores a single set of downloads for macOS, Windows, and Linux. Windows includes the installer and update fixes from 0.7.4.
+
+## [0.7.4] - 2026-11-17
+
+- On Windows, Check for Updates opens the official download page when a new version is available. Install the update from that page.
+- Windows Setup reports when an existing copy of Shutr must be closed before installation can continue.
+- Windows builds include the required C runtime.
+
 ## [0.7.3] - 2026-11-13
 
 - Releases carry only Shutr’s own downloads. FrameLatch 0.4.x installs Shutr manually once to keep updating.

@@ -83,9 +83,7 @@ Use `shutr://grab/area?then=copy,save` to select an area, then copy and save it.
 
 ## On Windows
 
-Windows downloads for 0.7.3 are paused while Microsoft reviews a Defender detection. See the [0.7.3 release notes](https://github.com/abd3lraouf-studios/shutr/releases/tag/v0.7.3) for availability.
-
-Shutr installs for your account, without an administrator prompt, and Settings → Apps uninstalls it.
+Install Shutr with `Shutr-Setup.exe` from the [releases page](https://github.com/abd3lraouf-studios/shutr/releases). It installs for your account, without an administrator prompt, and Settings → Apps uninstalls it. Shutr isn't code-signed yet, so SmartScreen may stop the installer the first time: choose More info, then Run anyway.
 
 Everything in this guide works the same way, with Ctrl where macOS uses `⌘` and Alt where it uses `Option`. The differences:
 
@@ -98,6 +96,10 @@ Everything in this guide works the same way, with Ctrl where macOS uses `⌘` an
 
 ## Updates
 
-Choose **Check for Updates…** in the menu bar or tray. A red dot marks a new version; choosing it opens the release notes, where you can install it, be reminded later, or skip that version. After the install, **Relaunch Now** starts the new version, and **Later** keeps the current one running until you next open Shutr. On Windows, the installed app downloads the new installer instead: **Install and Relaunch** runs it, and **Later** keeps the current version running. Settings → General controls the daily check. Turn on **Download and install automatically** there, or tick the box in the update window, and Shutr downloads a new version by itself and installs it the next time you quit it or choose **Relaunch to Update** (macOS and Windows). If an update fails, **Try Again** retries it and **Download Manually…** opens the release page. Builds without an update feed show **Open Releases…** for manual downloads.
+Choose **Check for Updates…** in the menu bar or tray. A red dot marks a new version. Open the release notes to get the update, be reminded later, or skip that version. Settings → General controls the daily check. Builds without an update feed show **Open Releases…** for manual downloads.
 
-If you use version 0.3.x, or version 0.6 or earlier on a Mac, [install Shutr manually](https://github.com/abd3lraouf-studios/shutr/releases/latest) once to move to the current update feed; macOS then asks again for Screen Recording and Accessibility. Your settings carry over. If Windows Start still lists an older name after an in-app update, run Shutr Setup once to update the shortcut.
+On Windows, **Open Download Page** opens the GitHub release. Download and run `Shutr-Setup.exe` to update an installed copy. For the portable app, quit Shutr and extract the new ZIP.
+
+On macOS, choose **Install Update**, then **Relaunch Now** to start the new version. **Later** keeps the current version running until you next open Shutr. Turn on **Download and install automatically** in Settings → General or in the update window to have Shutr prepare updates in the background. If an update fails, **Try Again** retries it and **Download Manually…** opens the release page.
+
+If you use version 0.3.x, or version 0.6 or earlier on a Mac, [install Shutr manually](https://github.com/abd3lraouf-studios/shutr/releases/latest) once to move to the current update feed. macOS then asks again for Screen Recording and Accessibility. Your settings carry over. If Windows Start still lists an older name after an earlier update, run Shutr Setup once to update the shortcut.
