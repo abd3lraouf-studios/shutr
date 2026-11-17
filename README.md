@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/abd3lraouf-studios/shutr/releases/tag/v0.7.3"><strong>Windows release status →</strong></a>
+    <a href="https://github.com/abd3lraouf-studios/shutr/releases/latest/download/Shutr-Setup.exe"><strong>Windows →</strong></a>
 </p>
 
 <p align="center">
@@ -56,7 +56,7 @@ Shutr needs macOS 15.2 or later on Apple silicon. If you’re installing it manu
 
 ### Windows
 
-Windows downloads for 0.7.3 are paused while Microsoft reviews a Defender detection. See the [0.7.3 release notes](https://github.com/abd3lraouf-studios/shutr/releases/tag/v0.7.3) for availability.
+Download and run [Shutr-Setup.exe](https://github.com/abd3lraouf-studios/shutr/releases/latest/download/Shutr-Setup.exe), or extract the [portable ZIP](https://github.com/abd3lraouf-studios/shutr/releases/latest/download/Shutr-windows-x64.zip).
 
 Shutr lives in the tray and needs Windows 10 or 11 on x64. It installs for your account without an administrator prompt and keeps your settings when you upgrade.
 
