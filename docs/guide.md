@@ -83,7 +83,9 @@ Use `shutr://grab/area?then=copy,save` to select an area, then copy and save it.
 
 ## On Windows
 
-Install Shutr with `Shutr-Setup.exe` from the [releases page](https://github.com/abd3lraouf-studios/shutr/releases). It installs for your account, without an administrator prompt, and Settings → Apps uninstalls it. Shutr isn't code-signed yet, so SmartScreen may stop the installer the first time: choose More info, then Run anyway.
+Windows downloads for 0.7.3 are paused while Microsoft reviews a Defender detection. See the [0.7.3 release notes](https://github.com/abd3lraouf-studios/shutr/releases/tag/v0.7.3) for availability.
+
+Shutr installs for your account, without an administrator prompt, and Settings → Apps uninstalls it.
 
 Everything in this guide works the same way, with Ctrl where macOS uses `⌘` and Alt where it uses `Option`. The differences:
 

@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/abd3lraouf-studios/shutr/releases/latest/download/Shutr-Setup.exe"><strong>Windows →</strong></a>
+    <a href="https://github.com/abd3lraouf-studios/shutr/releases/tag/v0.7.3"><strong>Windows release status →</strong></a>
 </p>
 
 <p align="center">
@@ -56,10 +56,9 @@ Shutr needs macOS 15.2 or later on Apple silicon. If you’re installing it manu
 
 ### Windows
 
-1. Download `Shutr-Setup.exe` from the [latest release](https://github.com/abd3lraouf-studios/shutr/releases/latest).
-2. Run it. Shutr is unsigned on Windows, so SmartScreen may stop it the first time. Choose **More info**, then **Run anyway**. It installs for your account without an administrator prompt and upgrades earlier installations, keeping your settings.
+Windows downloads for 0.7.3 are paused while Microsoft reviews a Defender detection. See the [0.7.3 release notes](https://github.com/abd3lraouf-studios/shutr/releases/tag/v0.7.3) for availability.
 
-Shutr then lives in the tray. It needs Windows 10 or 11 on x64. For a portable copy, unzip `Shutr-windows-x64.zip` into any folder you can write to and run `Shutr.exe`.
+Shutr lives in the tray and needs Windows 10 or 11 on x64. It installs for your account without an administrator prompt and keeps your settings when you upgrade.
 
 Use **Check for Updates…** in the menu bar or tray to look for a newer version.
 
