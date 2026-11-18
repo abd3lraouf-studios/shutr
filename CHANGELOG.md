@@ -2,6 +2,16 @@
 
 All notable changes to Shutr, formerly FrameLatch. Versions follow [Semantic Versioning](https://semver.org).
 
+## [0.8.0] - 2026-11-18
+
+- The editor's tools have their own palette, apart from the menu and the copy and save buttons. It starts on the left. Drag its grip to dock it on any side or float it over the image, or right-click it to pick a place.
+- Right-click the toolbar or the palette to show labels under the buttons. The palette hides them by itself when the window is too small for every tool.
+- **Optimize**, the feather button in the editor and the thumbnail, makes the PNGs you copy, save, and drag much smaller. Screenshots with few colors keep every pixel; others change only where it can't be seen. Settings → General has the same switch.
+- `Enter` in the editor now copies the image and closes the editor. Settings → Editor can bring back the old behavior.
+- The editor toolbar always has an OCR button. Recognized text also opens in a side panel, where you can fix it and copy it again.
+- Copying that closes the editor shows a "Copied" confirmation.
+- The thumbnail shows the capture's size, makes Edit its main button, and groups the other actions.
+
 ## [0.7.6] - 2026-11-17
 
 - On Windows, the tray menu offers **Download Shutr …** for a new version, matching what it does.

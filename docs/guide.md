@@ -25,7 +25,7 @@ A Hyper key works in shortcuts: if Raycast, Karabiner, or a similar app makes Ca
 
 ## After a capture
 
-In Settings → General → After capture, choose **Thumbnail**, **Editor**, or **None** under **Show capture**. You can independently copy or save each capture. Drag the thumbnail's top grip to move the card, or drag the image into another app to drop the file there. On macOS the card closes when the file drag starts. Click **Edit** to open the editor, or use the keyboard button to enable the thumbnail's shortcuts.
+In Settings → General → After capture, choose **Thumbnail**, **Editor**, or **None** under **Show capture**. You can independently copy or save each capture. Drag the thumbnail's top grip to move the card, or drag the image into another app to drop the file there. On macOS the card closes when the file drag starts. Click **Edit** to open the editor, or use the keyboard button to enable the thumbnail's shortcuts. The feather button turns Optimize on or off.
 
 When cards overlap, click the stack count to bring another capture forward. The menu bar’s **Thumbnails** submenu has **Focus Latest Thumbnail** and **Close All Thumbnails**. **Recover Last Capture** opens the most recent original. You can assign shortcuts to Focus and Recover in Settings → Hotkeys. Recover keeps one capture until Shutr quits, including after a thumbnail closes.
 
@@ -40,11 +40,15 @@ Each tool has a letter: `V` select and crop, `A` arrow, `T` text, `R` rectangle,
 - Zoom with the scroll wheel, a pinch, `⌘+` and `⌘-`. `⌘1` fits the image, `⌘0` shows it at 100%.
 - The editor opens with the select tool. With it, drag to select an area: `Enter` crops to it, `A` trims it to its content, and `Q` or `W` zooms in on its corners for a pixel-exact edge.
 - With the select tool, Cmd-click on macOS or Ctrl-click on Windows and Linux to select the bounds of the connected color region around a pixel.
-- With no area selected, `Enter` copies the image and keeps the editor open.
+- With no area selected, `Enter` copies the image and closes the editor.
+- The OCR button in the toolbar copies the text or QR code in the image, or in the selected area. The text also opens in a side panel, where you can fix mistakes and copy it again.
+- The tools sit in their own palette, docked to the left of the image at first. Drag its grip to dock it on any side, or let go over the image to float it there. Right-click the palette to dock it from a menu.
+- Right-click the toolbar or the palette to show or hide labels under the buttons. The palette drops its labels by itself when the window is too small for every tool.
+- **Optimize** (the feather button in the editor and the thumbnail) makes the PNGs you copy, save, and drag smaller. A screenshot with few colors keeps every pixel. Others change only where you couldn't see it; photos and gradients keep every pixel too. Settings → General has the same switch.
 - Use **Edit → Rotate Clockwise** or **Rotate Counterclockwise** to rotate the image, crop, and annotations together. Annotations stay editable.
 - Use **Previous Edit** and **Next Edit** in the editor’s Edit menu or the tray’s **Recent Edits** submenu to revisit recent captures, including copy-only and save-only screenshots. Shutr keeps up to eight documents with editable annotations until it quits.
 - To insert date or time tokens into the filename template, choose **Settings → General → Insert Date Field**. The preview shows how Shutr names the next save.
-- Settings → Editor sets the tool the editor opens with, what `Enter` does, whether to go back to the select tool after drawing, and which tools and readouts the toolbar shows.
+- Settings → Editor sets the tool the editor opens with, what `Enter` does, whether to go back to the select tool after drawing, which tools and readouts the toolbar shows, and whether its buttons have labels.
 - `K` adds a backdrop. Under Image, Wallpaper puts the screenshot on your current desktop picture. `P` switches the units between points and pixels.
 
 ## Measuring and colors
