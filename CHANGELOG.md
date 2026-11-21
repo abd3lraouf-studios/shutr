@@ -2,6 +2,10 @@
 
 All notable changes to Shutr, formerly FrameLatch. Versions follow [Semantic Versioning](https://semver.org).
 
+## [0.9.1] - 2026-11-21
+
+- Checking for updates no longer fails with “curl: (56) … 403” on a shared connection, such as a VPN or iCloud Private Relay. Shutr reads the update from the release itself instead of GitHub’s rate-limited API. Copies on 0.9.0 or earlier may need to try again after an hour, or install this version from the release page.
+
 ## [0.9.0] - 2026-11-21
 
 - On Windows, Shutr downloads and installs updates again. **Install Update** downloads the new installer and checks it against the release's SHA-256; **Install and Relaunch** runs it, or it runs the next time you quit Shutr. **Download and install automatically** in Settings → General does this in the background.
