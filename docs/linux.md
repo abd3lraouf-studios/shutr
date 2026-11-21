@@ -45,4 +45,4 @@ install -Dm644 src/icon.png "$data_dir/icons/hicolor/256x256/apps/$app_id.png"
 
 Run `shutr --open /path/to/image.png` to edit an image. Enable Automation before requesting screenshots from a script or a desktop shortcut with `shutr --capture area`. Add `--then edit,copy,save` to choose the outputs for that capture.
 
-Settings live at `$XDG_CONFIG_HOME/shutr/settings.json` or `~/.config/shutr/settings.json`. When a Debian package update is available, the tray menu opens its download. Install it through your package manager.
+Settings live at `$XDG_CONFIG_HOME/shutr/settings.json` or `~/.config/shutr/settings.json`. Shutr installed from the Debian package updates itself: the update window downloads the new package, and **Install and Relaunch** asks for your password and installs it with apt. A Shutr you built yourself opens the release's download instead.

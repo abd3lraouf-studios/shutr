@@ -2,6 +2,12 @@
 
 All notable changes to Shutr, formerly FrameLatch. Versions follow [Semantic Versioning](https://semver.org).
 
+## [0.9.0] - 2026-11-21
+
+- On Windows, Shutr downloads and installs updates again. **Install Update** downloads the new installer and checks it against the release's SHA-256; **Install and Relaunch** runs it, or it runs the next time you quit Shutr. **Download and install automatically** in Settings → General does this in the background.
+- The portable Windows app downloads a new version's ZIP to the Downloads folder and shows it, instead of opening the release page.
+- On Linux, Shutr installed from the Debian package updates itself: **Install and Relaunch** asks for your password and installs the new package with apt. Automatic updates download it in the background.
+
 ## [0.8.0] - 2026-11-18
 
 - The editor's tools have their own palette, apart from the menu and the copy and save buttons. It starts on the left. Drag its grip to dock it on any side or float it over the image, or right-click it to pick a place.

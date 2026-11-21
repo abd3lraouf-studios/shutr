@@ -102,8 +102,10 @@ Everything in this guide works the same way, with Ctrl where macOS uses `⌘` an
 
 Choose **Check for Updates…** in the menu bar or tray. A red dot marks a new version. Open the release notes to get the update, be reminded later, or skip that version. Settings → General controls the daily check. Builds without an update feed show **Open Releases…** for manual downloads.
 
-On Windows, **Open Download Page** opens the GitHub release. Download and run `Shutr-Setup.exe` to update an installed copy. For the portable app, quit Shutr and extract the new ZIP.
+Choose **Install Update** to download the new version. On macOS, **Relaunch Now** then starts it, and **Later** keeps the current version running until you next open Shutr. On Windows, **Install and Relaunch** runs the new installer, which closes Shutr, updates it, and opens it again; **Later** installs it the next time you quit Shutr. On Linux, **Install and Relaunch** asks for your password, installs the new Debian package, and opens Shutr again.
 
-On macOS, choose **Install Update**, then **Relaunch Now** to start the new version. **Later** keeps the current version running until you next open Shutr. Turn on **Download and install automatically** in Settings → General or in the update window to have Shutr prepare updates in the background. If an update fails, **Try Again** retries it and **Download Manually…** opens the release page.
+Turn on **Download and install automatically** in Settings → General or in the update window to have Shutr download updates in the background and install them as above. Linux still asks for your password: choose **Relaunch to Update** in the tray. If an update fails, **Try Again** retries it and **Download Manually…** opens the release page.
+
+The portable Windows app can't install updates itself: **Download Update** saves the new ZIP to your Downloads folder and shows it. Quit Shutr and extract it over your copy.
 
 If you use version 0.3.x, or version 0.6 or earlier on a Mac, [install Shutr manually](https://github.com/abd3lraouf-studios/shutr/releases/latest) once to move to the current update feed. macOS then asks again for Screen Recording and Accessibility. Your settings carry over. If Windows Start still lists an older name after an earlier update, run Shutr Setup once to update the shortcut.
